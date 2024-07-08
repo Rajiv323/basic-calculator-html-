@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator 2</title>
+<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+
+<body align="center" bgcolor="">
+<h1><u>calculator model #2</u></h1>
+<form>
+<table width="300" height="400" align="center" class="calculator"> 
+	<tr>
+		<td colspan="4"><input type="text" id="one" name="ans" class="txt" disabled="" style="text-align: right;"></td>
+	</tr>
+	<tr>
+		<td><input type="reset" value="c" class="block"></td>
+		<td><input type="button" value="<X" onclick="del()" class="block"></td>
+		<td><input type="button" value="%" onclick="one.value+='%'" class="block"></td>
+		<td><input type="button" value="/" onclick="one.value+='/'" class="block"></td>
+	</tr>
+	<tr> 
+		<td><input type="button" value="7" onclick="one.value+='7'" class="block"></td>
+		<td><input type="button" value="8" onclick="one.value+='8'" class="block"></td>
+		<td><input type="button" value="9" onclick="one.value+='9'" class="block"></td>
+		<td><input type="button" value="*" onclick="one.value+='*'" class="block"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="6" onclick="one.value+='6'" class="block"></td>
+		<td><input type="button" value="5" onclick="one.value+='5'" class="block"></td>
+		<td><input type="button" value="4" onclick="one.value+='4'" class="block"></td>
+		<td><input type="button" value="-" onclick="one.value+='-'" class="block"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="3" onclick="one.value+='3'" class="block"></td>
+		<td><input type="button" value="2" onclick="one.value+='2'" class="block"></td>
+		<td><input type="button" value="1" onclick="one.value+='1'" class="block"></td>
+		<td><input type="button" value="+" onclick="one.value+='+'" class="block"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="0" onclick="one.value+='0'" class="block"></td>
+		<td><input type="button" value="." onclick="one.value+='.'" class="block"></td>
+		<td colspan="2"><input type="button" value="=" onclick="one.value=eval(one.value)" class="block"></td>
+	</tr>
+</table>
+</form>
+<script>
+	  function del() {
+      var input = document.getElementById("one");
+      input.value = input.value.substring(0, input.value.length - 1);
+    }
+</script>
+</body>
+</html>
